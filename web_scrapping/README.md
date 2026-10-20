@@ -10,7 +10,7 @@ Este documento descreve como funciona o `coletar_grade.py`, que transforma a est
 | **Entrada do usuário** | Qual estrutura curricular coletar (`--curriculo 03`, por exemplo). Sem a opção, usa a primeira marcada como *Ativa* |
 | **Dependências** | `requests` (HTTP) e `beautifulsoup4` (HTML) |
 
-Arquivos gerados na pasta `dados/` (ou na indicada em `--saida`):
+Arquivos gerados na pasta `../dados/raw/` (ou na indicada em `--saida`):
 
 | Arquivo | Conteúdo |
 |---|---|
@@ -147,7 +147,7 @@ Para o `networkx`, por exemplo: `nx.from_pandas_edgelist(arestas, "pre_requisito
 | `--incluir-optativas` | Também busca pré-requisitos das optativas |
 | `--so-arestas` | Não acessa a rede: refaz `arestas.csv` a partir de `disciplinas.csv` (útil se você preencher `prerequisitos_brutos` à mão a partir do PPC) |
 | `--atraso S` | Segundos entre requisições (padrão 1,0) |
-| `--saida PASTA` | Pasta de saída (padrão `dados`) |
+| `--saida PASTA` | Pasta de saída (padrão `../dados/raw`, relativo ao script) |
 
 ## 7. Decisões de modelagem e limitações
 

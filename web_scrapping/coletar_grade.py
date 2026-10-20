@@ -2,7 +2,7 @@
 coletar_grade.py - coleta a grade curricular publica do SIGAA/UFRN e gera CSVs
 para modelar disciplinas como um grafo dirigido (pre-requisito -> disciplina).
 
-Saidas (na pasta --saida, padrao ./dados):
+Saidas (na pasta --saida, padrao ../dados/raw relativo a este script):
   disciplinas.csv   um no por disciplina (codigo, nome, ch, natureza, nivel, textos brutos)
   arestas.csv       pre_requisito,disciplina,alternativa   (alternativa=1 se a expressao tinha "OU")
   avisos.txt        o que nao foi possivel coletar ou ficou fora do grafo
@@ -266,7 +266,8 @@ def abrir_estrutura(cli, args, bruto):
 
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("--saida", default="dados")
+    ap.add_argument("--saida", default=str(Path(__file__).resolve().parent.parent / "dados" / "raw"),
+                    help="pasta de saida (padrao: ../dados/raw relativo a este script)")
     ap.add_argument("--listar", action="store_true", help="so lista os curriculos disponiveis e sai")
     ap.add_argument("--curriculo", help="codigo da estrutura curricular (ex.: 03); padrao: a primeira Ativa")
     ap.add_argument("--url-estrutura", help="URL direta da pagina de Estrutura Curricular (pula a listagem)")
@@ -299,7 +300,7 @@ def main():
         disciplinas, ancoras = parse_estrutura(sopa)
         
         if not disciplinas:
-            sys.exit("Nenhuma disciplina reconhecida. Abra dados/bruto/estrutura.html e confira o formato.")
+            sys.exit("Nenhuma disciplina reconhecida. Abra dados/raw/bruto/estrutura.html e confira o formato.")
     
     obrig = [d for d in disciplinas if d["natureza"] == "Obrigatória"]
     print(f"{len(disciplinas)} componentes ({len(obrig)} obrigatorios) em "
@@ -375,7 +376,7 @@ def main():
     print(f"{len(avisos)} aviso(s) em {saida / 'avisos.txt'}")
     
     if not arestas and not args.so_arestas:
-        print("\nNenhuma aresta foi obtida. Confira avisos.txt e dados/bruto/detalhe_*.html. Plano B: preencha a "
+        print("\nNenhuma aresta foi obtida. Confira avisos.txt e dados/raw/bruto/detalhe_*.html. Plano B: preencha a "
               "coluna prerequisitos_brutos de disciplinas.csv (ex.: 'DCA0204 E ECT1203') com base no PPC e rode "
               "'python coletar_grade.py --so-arestas'.")
 

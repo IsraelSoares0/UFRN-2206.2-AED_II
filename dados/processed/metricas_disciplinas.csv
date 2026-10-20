@@ -1,0 +1,51 @@
+codigo,nome,natureza,nivel,ch,grau_entrada,grau_saida,cent_grau_entrada,cent_grau_saida,forca_entrada_h,forca_saida_h,betweenness,betweenness_ponderada_h,closeness_entrada,closeness_saida,coreness,alcance_descendentes,horas_bloqueadas_h,alcance_ancestrais,indice_criticidade
+ECT3101,Matemática Básica e Modelagem,Obrigatória,1,60,0,3,0.0,0.06122,0,180,0.0,0.0,0.0,0.17545,2,24,1679,0,0.59
+ECT3102,Álgebra Matricial e Vetorial,Obrigatória,1,60,0,1,0.0,0.02041,0,60,0.0,0.0,0.0,0.06531,1,8,740,0,0.38
+ECT3103,"Metodologia Científica, Tecnológica e Empreendedora",Obrigatória,1,30,0,1,0.0,0.02041,0,30,0.0,0.0,0.0,0.03925,1,5,530,0,0.345
+ECT3104,Lógica de Programação,Obrigatória,1,60,0,1,0.0,0.02041,0,60,0.0,0.0,0.0,0.16357,1,23,1634,0,0.41
+ECT3105,Práticas de Leitura e Escrita I,Obrigatória,1,30,0,1,0.0,0.02041,0,30,0.0,0.0,0.0,0.03867,1,6,560,0,0.365
+ECT3106,"Ciência, Tecnologia e Sociedade",Obrigatória,1,30,0,2,0.0,0.04082,0,60,0.0,0.0,0.0,0.05669,1,5,500,0,0.42
+ECT3107,Introdução Às Ciências e Tecnologia,Obrigatória,1,30,0,0,0.0,0.0,0,0,0.0,0.0,0.0,0.0,0,0,0,0,0.085
+ECT3203,Ambiente e Desenvolvimento,Obrigatória,1,60,0,0,0.0,0.0,0,0,0.0,0.0,0.0,0.0,0,0,0,0,0.085
+DCA3206,Matemática Discreta,Obrigatória,2,60,1,1,0.02041,0.02041,60,60,0.00085,0.00085,0.02041,0.02721,2,2,220,1,0.368
+ECT3201,Linguagem de Programação,Obrigatória,2,60,1,5,0.02041,0.10204,60,300,0.00935,0.00935,0.02041,0.22971,3,22,1574,1,0.908
+ECT3202,Álgebra Linear,Obrigatória,2,60,1,3,0.02041,0.06122,60,180,0.00298,0.00298,0.02041,0.08333,3,7,680,1,0.798
+ECT3204,Modelagem do Mundo Físico I,Obrigatória,2,30,1,1,0.02041,0.02041,60,30,0.00106,0.0017,0.02041,0.03925,2,5,500,1,0.488
+ECT3205,Práticas de Leitura e Escrita II,Obrigatória,2,30,1,1,0.02041,0.02041,30,30,0.00213,0.00213,0.02041,0.03925,1,5,530,1,0.47
+ECT3207,Cálculo Diferencial e Integral I,Obrigatória,2,90,1,4,0.02041,0.08163,60,360,0.00702,0.00638,0.02041,0.19149,3,21,1499,1,0.892
+ECT3308,"Ciência, Tecnologia e Sociedade II",Obrigatória,2,30,1,0,0.02041,0.0,30,0,0.0,0.0,0.02041,0.0,1,0,0,1,0.115
+DCA3301,Sistemas Digitais,Obrigatória,3,75,1,1,0.02041,0.02041,60,75,0.00057,0.0,0.02721,0.02721,2,2,220,2,0.355
+DCA3303,Programação Avançada,Obrigatória,3,90,1,9,0.02041,0.18367,60,810,0.00964,0.00765,0.02721,0.20288,3,13,980,2,0.908
+ECT3302,Cálculo Diferencial e Integral II,Obrigatória,3,60,1,3,0.02041,0.06122,90,180,0.00468,0.00468,0.02721,0.09276,3,10,899,2,0.845
+ECT3304,Probabilidade e Estatística,Obrigatória,3,60,1,3,0.02041,0.06122,90,180,0.00354,0.00298,0.02721,0.08163,3,6,620,2,0.795
+ECT3305,Práticas de Leitura em Inglês,Obrigatória,3,30,0,0,0.0,0.0,0,0,0.0,0.0,0.0,0.0,0,0,0,0,0.085
+ECT3306,Fundamentos da Mecânica,Obrigatória,3,60,1,3,0.02041,0.06122,90,180,0.00298,0.00319,0.02721,0.08265,2,9,770,2,0.712
+DCA3402,Modelagem e Análise Linear de Sistemas,Obrigatória,4,60,2,1,0.04082,0.02041,120,60,0.00461,0.00425,0.04665,0.05102,2,5,590,4,0.575
+DCA3404,Arquitetura de Computadores,Obrigatória,4,60,1,3,0.02041,0.06122,60,180,0.00217,0.00425,0.02721,0.08163,3,6,605,2,0.765
+ECT3303,"Gestão e Economia da Ciência, Tecnologia e Inovação",Obrigatória,4,60,2,1,0.04082,0.02041,60,60,0.0051,0.0051,0.04592,0.04082,1,4,470,3,0.5
+ECT3401,Computação Numérica,Obrigatória,4,60,3,1,0.06122,0.02041,210,60,0.00239,0.00276,0.08163,0.04082,3,4,500,6,0.592
+ECT3403,Modelagem do Mundo Físico II,Obrigatória,4,30,2,1,0.04082,0.02041,90,30,0.00376,0.00531,0.05442,0.04082,2,4,470,4,0.528
+ECT3511,Fundamentos de Circuitos e Sistemas Controlados,Obrigatória,4,54,2,1,0.04082,0.02041,120,54,0.0027,0.00213,0.05669,0.04082,3,4,515,5,0.602
+ECT3622,Fundamentos do Eletromagnetismo,Obrigatória,4,60,1,0,0.02041,0.0,60,0,0.0,0.0,0.03061,0.0,1,0,0,3,0.115
+DCA3501,Ciência de Dados,Obrigatória,5,60,2,2,0.04082,0.04082,150,120,0.00125,0.00064,0.06122,0.04592,3,3,440,6,0.587
+DCA3502,Sinais e Sistemas,Obrigatória,5,60,2,1,0.04082,0.02041,120,60,0.00252,0.00255,0.05669,0.04082,3,4,500,5,0.598
+DCA3503,Algoritmos e Estruturas de Dados I,Obrigatória,5,60,1,3,0.02041,0.06122,90,180,0.00161,0.00128,0.03061,0.06531,3,4,500,3,0.685
+DCA3504,Otimização de Sistemas,Obrigatória,5,60,2,2,0.04082,0.04082,120,120,0.00451,0.00489,0.07143,0.04592,3,3,440,7,0.66
+DCA3505,Sistemas Operacionais,Obrigatória,5,60,1,3,0.02041,0.06122,60,180,0.00104,0.0017,0.03061,0.06531,3,4,485,3,0.665
+DCA3506,Eletrônica,Obrigatória,5,75,1,2,0.02041,0.04082,54,150,0.00185,0.00128,0.04898,0.04592,3,3,440,6,0.605
+DCA3601,Análise de Sistemas de Controle,Obrigatória,6,60,1,3,0.02041,0.06122,60,180,0.00461,0.00425,0.04252,0.06531,2,4,530,5,0.662
+DCA3602,Processamento Digital de Sinais,Obrigatória,6,60,1,2,0.02041,0.04082,60,120,0.00167,0.0017,0.04898,0.04592,3,3,440,6,0.6
+DCA3603,Engenharia de Software,Obrigatória,6,45,1,2,0.02041,0.04082,90,90,0.00033,0.00043,0.03061,0.04592,3,3,440,3,0.535
+DCA3604,Banco de Dados,Obrigatória,6,45,1,2,0.02041,0.04082,90,90,0.00033,0.00043,0.03061,0.04592,3,3,440,3,0.535
+DCA3605,Redes de Computadores,Obrigatória,6,60,1,3,0.02041,0.06122,90,180,0.00033,0.0,0.03061,0.06531,3,4,485,3,0.625
+DCA3606,Inteligência Artificial,Obrigatória,6,60,2,2,0.04082,0.04082,150,120,0.00125,0.00064,0.06122,0.04592,3,3,440,6,0.587
+ECT3517,Ciências e Tecnologias Aplicadas 3,Obrigatória,6,30,3,2,0.06122,0.04082,120,60,0.00971,0.01127,0.10204,0.04592,2,3,440,10,0.605
+DCA3701,Projeto de Sistemas de Controle,Obrigatória,7,90,1,1,0.02041,0.02041,60,90,0.00067,0.00128,0.04082,0.02041,2,1,160,6,0.338
+DCA3702,Algoritmos e Estruturas de Dados II,Obrigatória,7,60,1,1,0.02041,0.02041,60,60,0.00021,0.00043,0.03265,0.02041,2,1,160,4,0.308
+DCA3703,Programação Paralela,Obrigatória,7,45,3,1,0.06122,0.02041,210,45,0.00085,0.00191,0.06378,0.02041,3,1,160,5,0.44
+DCA3704,Sistemas Distribuídos,Obrigatória,7,45,2,1,0.04082,0.02041,150,45,0.0005,0.00064,0.04665,0.02041,3,1,160,4,0.422
+DCA3705,Autômatos e Linguagens Formais,Obrigatória,7,60,3,1,0.06122,0.02041,210,60,0.00198,0.0017,0.08333,0.02041,3,1,160,7,0.488
+DCA3706,Sistemas Embarcados,Obrigatória,7,60,2,1,0.04082,0.02041,135,60,0.00092,0.00043,0.04665,0.02041,2,1,160,4,0.353
+DCA3801,Projeto Integrado,Obrigatória,8,120,12,1,0.2449,0.02041,675,120,0.01017,0.00893,0.33703,0.02041,3,1,160,34,0.582
+ECP3901,Trabalho de Conclusão de Curso,Obrigatória,9,160,7,0,0.14286,0.0,480,0,0.0,0.0,0.35266,0.0,3,0,0,43,0.262
+ECP3902,Estágio Obrigatório,Obrigatória,10,160,12,0,0.2449,0.0,675,0,0.0,0.0,0.33703,0.0,3,0,0,34,0.262
