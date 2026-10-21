@@ -6,7 +6,7 @@ Projeto da disciplina **Algoritmos e Estruturas de Dados II**.
 
 ## Integrantes
 
-Nome Completo 1 · Nome Completo 2 · Nome Completo 3
+Israel Soares de Castro Filho
 
 ## Vídeo
 
@@ -16,7 +16,7 @@ https://youtu.be/...
 
 ## Problema e pergunta
 
-Um curso de graduação é organizado em períodos, e muitas disciplinas só podem ser cursadas depois de outras (os **pré-requisitos**). Reprovar ou adiar uma disciplina pode travar várias outras e, no pior caso, atrasar a formatura. Como essas dependências são relações entre pares de disciplinas (A é pré-requisito de B), o currículo é naturalmente uma **rede**.
+Um curso de graduação é organizado em períodos, e muitas disciplinas só podem ser cursadas depois de pagar seus **pré-requisitos**. Reprovar ou adiar uma disciplina pode travar várias outras e, no pior caso, atrasar a formatura. Como essas dependências são relações entre pares de disciplinas (A é pré-requisito de B), o currículo é naturalmente uma **rede**.
 
 > **Pergunta:** quais disciplinas obrigatórias de Engenharia da Computação (UFRN) são os principais pontos críticos do currículo — as que mais bloqueiam outras, ligam o início ao fim do curso ou concentram conexões?
 
@@ -35,7 +35,7 @@ A rede ajuda porque mostra o que está *além* dos pré-requisitos diretos: depe
 
 ## Dados (fonte, como obter, limpeza)
 
-**Fonte.** Dados reais e públicos do currículo de Engenharia da Computação da UFRN, disponíveis no SIGAA (`sigaa.ufrn.br`): disciplinas, carga horária, período e texto de pré-requisitos. *[preencher: data da coleta e se foi manual ou por script]*
+**Fonte.** Dados reais e públicos do currículo de Engenharia da Computação da UFRN, disponíveis no SIGAA (`sigaa.ufrn.br`): disciplinas, carga horária, período e texto de pré-requisitos. Coletados apartir do script em python da pasta `we_scrapping/`
 
 **Como obter.** Os arquivos já estão no repositório, em `dados/raw/`:
 
@@ -90,7 +90,7 @@ O grafo é **dirigido, ponderado e simples**, e é um **DAG** (sem ciclos), o qu
 | Caminhos e distâncias | 4 | `projeto.ipynb`, seções 4.4 e 4.5, cél. 13 e 14 | base de betweenness e closeness |
 | Centralidade de grau (normalizada) | 4 | `projeto.ipynb`, seção 4.3, cél. 10 | comparar graus em escala de 0 a 1 |
 | Betweenness | 4 | `projeto.ipynb`, seção 4.4, cél. 13 | achar disciplinas-ponte entre o básico e o avançado |
-| Closeness (correção de Wasserman–Faust) | 4 | `projeto.ipynb`, seção 4.5, cél. 14 | medir quem alcança, ou é alcançada por, muitas disciplinas rapidamente |
+| Closeness | 4 | `projeto.ipynb`, seção 4.5, cél. 14 | medir quem alcança, ou é alcançada por, muitas disciplinas rapidamente |
 | Componentes fracos e fortes, GCC | 4 | `projeto.ipynb`, seções 3.5 e 4.9, cél. 6 e 20 | achar os blocos separados e os isolados; mostrar que um DAG não é fortemente conexo |
 | Visualização de redes | 4 | `projeto.ipynb`, seção 3.6, cél. 8, 12, 16 e 17 | desenhar o currículo por período, com cor e espessura |
 | K-core, k-shell, core number e degeneracy | 5 | `projeto.ipynb`, seção 4.6, cél. 15 | separar o núcleo densamente interligado da periferia |
@@ -98,7 +98,6 @@ O grafo é **dirigido, ponderado e simples**, e é um **DAG** (sem ciclos), o qu
 | Excentricidade, diâmetro, periferia, centro e autovetor | 2 e 4 | `projeto.ipynb`, seção 4.9, cél. 20 | **avaliados e descartados**, com a justificativa no notebook |
 | Caminho crítico em DAG (programação dinâmica na ordem topológica) | método próprio | `projeto.ipynb`, seção 4.7, cél. 18 | medir a cadeia que atrasa a formatura |
 | Índice de criticidade (média de percentis) e correlação de Spearman | método próprio | `projeto.ipynb`, seção 4.8, cél. 19 | consolidar critérios e ver onde as medidas discordam |
-| *Não usados:* BFS/DFS manuais, snowball, triângulos e clustering, k-truss, redes bipartidas, projeção, Jaccard e NER | 3, 4, 5 e 6 | — | não se aplicam à pergunta (ver seção 4.9 do notebook) |
 
 ## Como executar
 
@@ -132,7 +131,7 @@ source .venv/bin/activate        # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 
 # 4. abrir o notebook
-jupyter lab projeto.ipynb
+acessar arquivo projeto.ipynb
 ```
 
 No Jupyter, use **Run → Run All Cells**. Os caminhos são relativos à pasta do notebook, então abra-o a partir da raiz do repositório.
@@ -208,9 +207,7 @@ A correlação mostra que as medidas respondem a perguntas diferentes:
 - **Coreness quase não se relaciona com alcance** (0,09): estar no núcleo denso não significa bloquear mais.
 - **As medidas de entrada têm correlação negativa com o alcance** (−0,34 a −0,43): o currículo tem um lado "base", que bloqueia, e um lado "fim", que depende.
 - **Betweenness tem correlação moderada com quase tudo** (0,37 a 0,54): é um terceiro tipo de importância, a de quem está no meio do caminho.
-
-**Em uma frase:** as disciplinas mais críticas são `ECT3101`, `ECT3104`, `ECT3201` e `ECT3207` (a fundação, que bloqueia de 21 a 24 das outras 49), seguidas por `DCA3303` (hub com 9 dependentes diretos). No outro extremo, `DCA3801` é o gargalo de convergência que conecta tudo à reta final.
-
+  
 ## Limitações e próximos passos
 
 **Limitações**
@@ -222,19 +219,12 @@ A correlação mostra que as medidas respondem a perguntas diferentes:
 - Com 50 nós, o ranking entre posições vizinhas é frágil. Por isso a conclusão se apoia em grupos de disciplinas e em vários critérios.
 - Excentricidade, diâmetro e centralidade de autovetor não puderam ser calculados: um DAG não é fortemente conexo e sua matriz de adjacência é nilpotente.
 
-**Próximos passos**
-
-- Usar dados reais de reprovação por disciplina como peso, para medir criticidade de fato e não só estrutural.
-- Incluir as optativas e as equivalências para estimar o caminho de alunos com créditos de currículos antigos.
-- Comparar com o currículo de outro curso.
-
 ## Referências
 
 - SIGAA UFRN — estrutura curricular do curso de Engenharia da Computação: https://sigaa.ufrn.br
 - Material das aulas da disciplina Algoritmos e Estruturas de Dados II (Semanas 2 a 6).
 - Hagberg, A. A.; Schult, D. A.; Swart, P. J. *Exploring network structure, dynamics, and function using NetworkX*. Proceedings of the 7th Python in Science Conference (SciPy), 2008, p. 11–15.
 - Seidman, S. B. *Network structure and minimum degree*. Social Networks, 5(3), 1983, p. 269–287. (k-core)
-- Batagelj, V.; Zaveršnik, M. *An O(m) algorithm for cores decomposition of networks*. arXiv:cs/0310049, 2003. (algoritmo usado em `core_number`)
 - Freeman, L. C. *A set of measures of centrality based on betweenness*. Sociometry, 40(1), 1977, p. 35–41.
 - Wasserman, S.; Faust, K. *Social Network Analysis: Methods and Applications*. Cambridge University Press, 1994. (correção de closeness para grafos desconexos)
 - Documentação de NetworkX (https://networkx.org), plotly (https://plotly.com/python/) e pandas (https://pandas.pydata.org).
