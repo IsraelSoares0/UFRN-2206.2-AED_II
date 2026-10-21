@@ -10,9 +10,7 @@ Israel Soares de Castro Filho
 
 ## Vídeo
 
-https://youtu.be/...
-
-(até 15 min no total)
+https://youtu.be/g4j8cal7PdA
 
 ## Problema e pergunta
 
